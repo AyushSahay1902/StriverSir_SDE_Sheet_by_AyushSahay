@@ -1,20 +1,29 @@
-import java.util.*;
-public class Solution {
+package Arrays;
+import java.util.List;
+import java.util.Set;
+
+public class union_of_2_arrays{
     public static List< Integer > sortedArray(int []a, int []b) {
         int n1 = a.length;
         int n2 = b.length;
-        set<int> st;
+        Set<Integer> st;
         for(int i=0; i< n1; i++){
-            st.insert(a[i]);
+            // st.insert(a[i]);
+            st.add(a[i]);
         }
         for(int i=0; i< n2; i++){
-            st.insert(b[i]);
+            // st.insert(b[i]);
+            st.add(b[i]);
         }
-        List<int> temp;
-        for(auto it : st){
-            temp.push_back(it); 
+        List<Integer> temp;
+        for(int i=0; i<=st.size(); i++){
+            temp.concat(st(i)); 
         }
         return temp;
+    }
+
+    private static Object st(int i) {
+        return null;
     }
 
     public static void main(String args[]){
